@@ -1,0 +1,43 @@
+{
+  "name": "base_react_vite_project-20250128",
+  "version": "1.0.0",
+  "description": "Sample basic React Vite project setup with some dev dependencies",
+  "private": true,
+  "homepage": "https://github.com/altoinu/base_react_vite_project-20250128#readme",
+  "bugs": {
+    "url": "https://github.com/altoinu/base_react_vite_project-20250128/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altoinu/base_react_vite_project-20250128.git"
+  },
+  "license": "ISC",
+  "author": "Kaoru Kawashima",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src",
+    "prettier": "prettier --write \"**/*.{md,css,js,cjs,mjs,jsx}\"",
+    "lint:fix": "npm-run-all prettier lint"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.14.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "3.4.2",
+    "prettier-plugin-sort-imports": "^1.8.6",
+    "vite": "^6.0.11"
+  }
+}
