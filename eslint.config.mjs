@@ -8,7 +8,7 @@ import globals from "globals";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    files: ["**/*.{js,mjs,cjs,jsx}"],
+    files: ["**/*.{js,cjs,mjs,jsx}"],
     languageOptions: { globals: globals.browser },
     plugins: {
       "react-hooks": eslintPluginReactHooks,
