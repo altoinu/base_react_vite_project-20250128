@@ -92,6 +92,8 @@ const config = {
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
   moduleNameMapper: {
+    // mock for CSS modules
+    // https://medium.com/trabe/testing-css-modules-in-react-components-with-jest-enzyme-and-a-custom-modulenamemapper-8ff86c7d18a2
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
   },
 
@@ -180,6 +182,7 @@ const config = {
 
   // A map from regular expressions to paths to transformers
   // transform: undefined,
+  // https://stackoverflow.com/questions/62820035/babel-throwing-support-for-the-experimental-syntax-jsx-isnt-currently-enabled
   transform: {
     "^.+\\.(js|jsx)$": "babel-jest",
   },
