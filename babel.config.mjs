@@ -1,6 +1,10 @@
 const config = {
   presets: [
-    // https://medium.com/trabe/testing-css-modules-in-react-components-with-jest-enzyme-and-a-custom-modulenamemapper-8ff86c7d18a2
+    // https://jenchan.biz/blog/dissecting-the-hell-jest-setup-esm-typescript-setup
+    // https://jestjs.io/docs/getting-started#generate-a-basic-configuration-file
+    // https://jestjs.io/docs/getting-started#using-babel
+    // https://stackoverflow.com/questions/62820035/babel-throwing-support-for-the-experimental-syntax-jsx-isnt-currently-enabled
+    // https://jestjs.io/docs/tutorial-react
     ["@babel/preset-env", { targets: { node: "current" } }],
     // https://jestjs.io/docs/tutorial-react#setup-without-create-react-app
     ["@babel/preset-react", { runtime: "automatic" }],
