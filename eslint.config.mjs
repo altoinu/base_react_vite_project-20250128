@@ -21,7 +21,11 @@ export default [
   },
   {
     // for jest test files
-    files: ["**/*.test.{js,cjs,mjs,jsx}", "**/__tests__/**/*.{js,cjs,mjs,jsx}"],
+    // files: ["**/*.{spec,test}.{js,cjs,mjs,jsx}", "**/__tests__/**/*.{js,cjs,mjs,jsx}"],
+    files: [
+      "**/*.{spec,test}.?(c|m)[jt]s?(x)",
+      "**/__tests__/**/*.?(c|m)[jt]s?(x)",
+    ],
     languageOptions: {
       globals: {
         ...globals.jest,
@@ -31,7 +35,8 @@ export default [
   },
   {
     // for other non test files
-    files: ["**/*.{js,cjs,mjs,jsx}"],
+    // files: ["**/*.{js,cjs,mjs,jsx}"],
+    files: ["**/*.?(c|m)[jt]s?(x)"],
     languageOptions: {
       globals: {
         ...globals.browser,

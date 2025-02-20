@@ -12,5 +12,8 @@ exports[`<Main> should render 1`] = `
   <div>
     Mock HelloBoxComponent
   </div>
+  <div>
+    Mock FetchDataComponent
+  </div>
 </div>
 `;

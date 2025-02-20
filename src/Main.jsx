@@ -1,3 +1,4 @@
+import FetchDataComponent from "./components/FetchDataComponent";
 import HelloBoxComponent from "./components/HelloBoxComponent";
 
 export default function Main() {
@@ -15,6 +16,7 @@ export default function Main() {
         secondPersonName="Doe"
         onButtonClick={handleButtonClick}
       />
+      <FetchDataComponent />
     </>
   );
 }
