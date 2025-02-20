@@ -106,6 +106,8 @@ const config = {
   // An enum that specifies notification mode. Requires { notify: true }
   // notifyMode: "failure-change",
 
+  passWithNoTests: true,
+
   // A preset that is used as a base for Jest's configuration
   // preset: undefined,
 
@@ -184,7 +186,7 @@ const config = {
   // transform: undefined,
   // https://stackoverflow.com/questions/62820035/babel-throwing-support-for-the-experimental-syntax-jsx-isnt-currently-enabled
   transform: {
-    "^.+\\.(js|jsx)$": "babel-jest",
+    "^.+\\.(c|m)?jsx?$": "babel-jest",
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

@@ -30,6 +30,10 @@ jest.mock("./components/HelloBoxComponent", () => ({
 }));
 */
 
+jest.mock("./components/FetchDataComponent", () =>
+  jest.fn(() => <div>Mock FetchDataComponent</div>),
+);
+
 describe("<Main>", () => {
   it("should render", () => {
     const { container: pageContainer } = render(<Main />);
@@ -55,6 +59,8 @@ describe("<Main>", () => {
 
     // Tests to see if passed props were received correctly
     expect(HelloBoxComponent).toHaveBeenCalledTimes(2);
+    // undefined in second argument
+    // https://dev.to/peterlidee/mocking-react-components-jest-mocking-react-part-2-2l8j
     expect(HelloBoxComponent).toHaveBeenNthCalledWith(
       1,
       expect.objectContaining({ personName: "Kaoru" }),
