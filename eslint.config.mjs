@@ -21,7 +21,10 @@ export default [
   },
   {
     // for jest test files
-    // files: ["**/*.{spec,test}.{js,cjs,mjs,jsx}", "**/__tests__/**/*.{js,cjs,mjs,jsx}"],
+    // files: [
+    //   "**/*.{spec,test}.{js,cjs,mjs,jsx}",
+    //   "**/__tests__/**/*.{js,cjs,mjs,jsx}",
+    // ],
     files: [
       "**/*.{spec,test}.?(c|m)[jt]s?(x)",
       "**/__tests__/**/*.?(c|m)[jt]s?(x)",
