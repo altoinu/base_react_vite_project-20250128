@@ -1,5 +1,6 @@
 const config = {
   presets: [
+    // babel required for jest to work in vite react project
     // https://jenchan.biz/blog/dissecting-the-hell-jest-setup-esm-typescript-setup
     // https://jestjs.io/docs/getting-started#generate-a-basic-configuration-file
     // https://jestjs.io/docs/getting-started#using-babel

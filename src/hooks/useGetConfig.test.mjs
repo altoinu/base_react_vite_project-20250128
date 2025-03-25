@@ -5,6 +5,7 @@ import { act, renderHook } from "@testing-library/react";
 
 const TEST_URL = "http://localhost:4000/";
 
+// Mock a hook
 /*
 TODO:
 jest.mock causes test to fail with error:
@@ -16,15 +17,30 @@ fine... My brain is about to explode
 Could it be because of this?
 https://jestjs.io/docs/getting-started#using-vite
 https://jestjs.io/docs/ecmascript-modules
-https://github.com/haoqunjiang/vite-jest/tree/main/packages/vite-jest#mocking-es-modules
+https://jestjs.io/docs/ecmascript-modules#module-mocking-in-esm
 https://github.com/jestjs/jest/issues/10025
+https://github.com/haoqunjiang/vite-jest/tree/main/packages/vite-jest#mocking-es-modules
 
 Maybe try Vitest?
 https://victorbruce82.medium.com/vitest-with-react-testing-library-in-react-created-with-vite-3552f0a9a19a
 */
-// mock a hook
-// jest.mock("./useFetch.mjs");
+//jest.mock("./useFetch.mjs");
+
+/*
+xxx as jest.Mock works with global jest with @types/jest here for some
+reason... works with Next.js TypeScript project. Not sure if it is
+TypeScript vs JavaScript vs TypeScript issue or Next.js vs non-Next.js issue.
+Need more research
+*/
 const mockUseFetch = useFetch; // as jest.Mock;
+
+/*
+const mockUseFetch = jest.fn();
+jest.unstable_mockModule("./useFetch.mjs", () => ({
+  default: mockUseFetch,
+}));
+const useGetConfig = await import("./useGetConfig.mjs");
+*/
 
 describe.skip("useGetConfig", () => {
   /*
